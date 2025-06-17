@@ -1,0 +1,156 @@
+:root {
+            --bg-color: #121212;
+            --text-color: #E0E0E0;
+            --primary-color: #4A90E2;
+            --red: #D9534F;
+            --green: #5CB85C;
+            --yellow: #F0AD4E;
+            --dark-grey: #2a2a2a;
+            --light-grey: #3d3d3d;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: var(--dark-grey);
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .instructions {
+            text-align: left;
+            background-color: var(--light-grey);
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .instructions h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions ul {
+            padding-left: 20px;
+            margin-top: 0.5rem;
+        }
+
+        .meter {
+            margin-bottom: 2rem;
+        }
+
+        #frequency-display {
+            font-size: 5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            line-height: 1;
+        }
+
+        #status-message {
+            font-size: 1.5rem;
+            height: 2.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .status-tight { color: var(--red); }
+        .status-loose { color: var(--yellow); }
+        .status-good { color: var(--green); }
+        .status-ideal { color: #61ff61; }
+
+        .gauge-container {
+            position: relative;
+            height: 40px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .gauge-background {
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to right, 
+                var(--yellow) 0%, 
+                var(--yellow) 33.3%, 
+                var(--green) 33.3%, 
+                var(--green) 66.6%, 
+                var(--red) 66.6%, 
+                var(--red) 100%);
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #gauge-indicator {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 4px;
+            height: 30px;
+            background-color: white;
+            border-radius: 2px;
+            transition: left 0.2s ease-out;
+            transform: translateX(-2px);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+        }
+
+        .gauge-labels {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 25px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .gauge-labels .ideal {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        button {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        button.listening {
+            background-color: var(--red);
+        }
+
+        button.listening:hover {
+            background-color: #c9302c;
+        }
+
+        .specs {
+            font-size: 0.9rem;
+            color: #aaa;
+        }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printer Belt Tension Meter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>3D Printer Belt Tension Meter</h1>
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Position the belt for measurement according to your machine's documentation.</li>
+                <li>Place your phone's microphone near the middle of the belt.</li>
+                <li>Click "Start Listening" and pluck the belt firmly like a guitar string.</li>
+                <li>Adjust tension until the frequency is in the green zone.</li>
+            </ul>
+        </div>
+
+        <div class="meter">
+            <div class="gauge-container">
+                <div class="gauge-background"></div>
+                <div id="gauge-indicator"></div>
+                <div class="gauge-labels">
+                    <span>70Hz</span>
+                    <span>80Hz</span>
+                    <span class="ideal">85Hz</span>
+                    <span>90Hz</span>
+                    <span>100Hz</span>
+                </div>
+            </div>
+
+            <div id="frequency-display">-- Hz</div>
+            <p id="status-message">Click "Start" to begin</p>
+        </div>
+
+        <button id="start-btn">Start Listening</button>
+        <p class="specs">Target: <strong>80-90 Hz</strong> | Ideal: <strong>85 Hz</strong> | Max difference between belts: <strong>3 Hz</strong></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -154,3 +154,37 @@
             font-size: 0.9rem;
             color: #aaa;
         }
+
+        .options-container {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .options-container label {
+            font-size: 1rem;
+        }
+
+        #algorithm-select {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--light-grey);
+            color: var(--text-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+        }
+
+        #algorithm-select:focus {
+            outline: none;
+            box-shadow: 0 0 8px var(--primary-color);
+        }
+
+        #algorithm-select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }

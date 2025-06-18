@@ -40,8 +40,16 @@
             <p id="status-message">Click "Start" to begin</p>
         </div>
 
+        <div class="options-container" style="text-align: center; margin-bottom: 15px;">
+            <label for="algorithm-select">Detection Algorithm: </label>
+            <select id="algorithm-select">
+                <option value="autocorrelation">Autocorrelation (Original)</option>
+                <option value="fft" selected>FFT (More Stable)</option>
+            </select>
+        </div>
+
         <button id="start-btn">Start Listening</button>
-        <p class="specs">Target: <strong>80-90 Hz</strong> | Ideal: <strong>85 Hz</strong> | Max difference between belts: <strong>3 Hz</strong></p>
+
     </div>
 
     <script src="script.js"></script>
